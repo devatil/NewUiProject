@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: "New Tegomin", serif;
+  height: 95vh;
+  background-image: linear-gradient(to left bottom, #ca785286, #28b485a9),
+    url("/img/hero.jpg");
+
+  margin: 30px;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.first-text {
+  font-size: 6rem;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  animation-name: animasyon1;
+  animation-duration: 1s;
+}
+
+.second-text {
+  display: block;
+  font-size: 40px;
+  color: white;
+  animation-name: rightanimation;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: 2;
+}
+
+@keyframes animasyon1 {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px) rotate(90deg);
+  }
+
+  80% {
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rightanimation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
